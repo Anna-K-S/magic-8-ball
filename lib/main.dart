@@ -24,10 +24,10 @@ class BallPage extends StatefulWidget {
 }
 
 class _BallPageState extends State<BallPage> {
-  int ballNumber = 1;
-  void changeBallNumber() {
+  int _ballNumber = 1;
+  void _changeBallNumber() {
     setState(() {
-      ballNumber = Random().nextInt(5) + 1;
+      _ballNumber = Random().nextInt(5) + 1;
     });
   }
 
@@ -38,10 +38,10 @@ class _BallPageState extends State<BallPage> {
         children: <Widget>[
           Expanded(
             child: TextButton(
-              onPressed: () {
-                changeBallNumber();
-              },
-              child: Image.asset('assets/images/ball$ballNumber.png'),
+              onPressed: _changeBallNumber();
+                
+              
+              child: Image.asset('assets/images/ball$_ballNumber.png'),
             ),
           ),
         ],
